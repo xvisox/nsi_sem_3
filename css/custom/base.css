@@ -1,0 +1,1081 @@
+.reveal .slides {
+	text-align: left;
+}
+
+.reveal .slides section {
+	height: 100%;
+	box-sizing: border-box;
+	padding: 8px 12px 0;
+}
+
+.reveal ul,
+.reveal ol {
+	display: block;
+	margin-left: 1.1em;
+}
+
+.reveal li {
+	margin: 0.45em 0;
+}
+
+.reveal li::marker {
+	color: var(--accent);
+}
+
+.reveal .kicker {
+	display: block;
+	margin-bottom: 0.5em;
+	font-size: 0.42em;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--accent);
+}
+
+.reveal .muted {
+	color: var(--muted);
+}
+
+.reveal .accent {
+	color: var(--accent);
+}
+
+.reveal .accent-2 {
+	color: var(--accent-2);
+}
+
+.reveal .question {
+	margin: 0.4em 0 0.8em;
+	padding-left: 0.8em;
+	border-left: 6px solid var(--accent);
+	font-family: var(--r-heading-font);
+	font-size: 1.25em;
+	line-height: 1.25;
+	color: var(--r-heading-color);
+}
+
+.reveal .cols {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 48px;
+}
+
+.reveal .stats {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
+	margin-top: 1.2em;
+}
+
+.reveal .stat {
+	padding: 28px 24px;
+	border-top: 4px solid var(--accent);
+	border-radius: var(--radius);
+	background: var(--surface);
+}
+
+.reveal .stats.wide-last {
+	grid-template-columns: 1fr 1fr 1fr 1.45fr;
+}
+
+.reveal .stat .value {
+	white-space: nowrap;
+	font-family: var(--num-font);
+	font-size: 1.75em;
+	font-weight: 700;
+	line-height: 1;
+	color: var(--r-heading-color);
+	font-variant-numeric: tabular-nums;
+}
+
+.reveal .stat .label {
+	margin-top: 0.7em;
+	font-size: 22px;
+	line-height: 1.3;
+	color: var(--muted);
+}
+
+.reveal table.data {
+	width: 100%;
+	margin: 0.6em 0 0;
+	font-size: 0.8em;
+}
+
+.reveal table.data th {
+	padding: 0.5em 0.6em;
+	border-bottom: 2px solid var(--r-heading-color);
+	font-size: 0.78em;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.reveal table.data td {
+	padding: 0.7em 0.6em;
+	border-bottom: 1px solid var(--rule);
+}
+
+.reveal table.matrix th,
+.reveal table.matrix td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.reveal table.matrix th:first-child,
+.reveal table.matrix td:first-child {
+	text-align: left;
+}
+
+.reveal table.matrix th small {
+	display: block;
+	margin-top: 0.3em;
+	font-size: 0.9em;
+	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+.reveal table.matrix td {
+	padding: 0.5em 0.6em;
+}
+
+/* Model names break at their own hyphens otherwise ("RoBERTa-|base"); line breaks are explicit in the markup. */
+.reveal table.matrix td:first-child {
+	white-space: nowrap;
+}
+
+.reveal table.matrix td br + small {
+	margin-left: 0;
+}
+
+.reveal table.matrix td small {
+	display: inline;
+	margin-left: 0.4em;
+	font-size: 0.75em;
+	vertical-align: baseline;
+	color: var(--muted);
+}
+
+.reveal table.matrix tr.sides th {
+	padding-bottom: 0.3em;
+	border-bottom-width: 4px;
+	font-size: 0.62em;
+}
+
+.reveal table.matrix tr.sides th:first-child {
+	border-bottom: none;
+}
+
+.reveal table.matrix .side-ft {
+	border-bottom-color: var(--accent);
+	color: var(--accent);
+}
+
+.reveal table.matrix .side-rivals {
+	border-bottom-color: var(--accent-2);
+	color: var(--accent-2);
+}
+
+.reveal table.matrix .col-ft {
+	background: var(--accent-soft);
+}
+
+.reveal table.matrix .on::before {
+	content: '';
+	display: inline-block;
+	width: 0.6em;
+	height: 0.6em;
+	border-radius: 50%;
+	background: var(--accent-2);
+}
+
+.reveal table.matrix .col-ft.on::before {
+	background: var(--accent);
+}
+
+.reveal .tag {
+	display: inline-block;
+	padding: 0.1em 0.55em;
+	border-radius: 999px;
+	font-size: 0.8em;
+	font-weight: 600;
+}
+
+.reveal .tag.specialised {
+	background: var(--accent-soft);
+	color: var(--accent);
+}
+
+.reveal .tag.general {
+	background: var(--accent-2-soft);
+	color: var(--accent-2);
+}
+
+.reveal h1,
+.reveal h2,
+.reveal .question {
+	text-wrap: balance;
+}
+
+.reveal .source {
+	position: absolute;
+	left: 12px;
+	bottom: 44px;
+	font-size: 0.36em;
+	color: var(--muted);
+}
+
+.reveal .chart {
+	width: 100%;
+	height: auto;
+	font-family: var(--r-main-font);
+}
+
+.reveal .chart .axis {
+	stroke: var(--muted);
+	stroke-width: 1.5;
+}
+
+.reveal .chart .grid {
+	stroke: var(--rule);
+	stroke-width: 1;
+}
+
+.reveal .chart text {
+	fill: var(--muted);
+	font-size: 15px;
+}
+
+.reveal .chart .band-small {
+	fill: var(--accent);
+	opacity: 0.14;
+}
+
+.reveal .chart .band-general {
+	fill: var(--accent-2);
+	opacity: 0.14;
+}
+
+.reveal .chart .curve-small {
+	fill: none;
+	stroke: var(--accent);
+	stroke-width: 4;
+	stroke-linecap: round;
+}
+
+.reveal .chart .curve-general {
+	fill: none;
+	stroke: var(--accent-2);
+	stroke-width: 4;
+	stroke-dasharray: 12 8;
+}
+
+.reveal .chart .marker {
+	stroke: var(--r-background-color);
+	stroke-width: 3;
+}
+
+.reveal .chart .marker.mean {
+	fill: var(--accent);
+}
+
+.reveal .chart .marker.var {
+	fill: var(--r-heading-color);
+}
+
+.reveal .chart .guide {
+	stroke: var(--muted);
+	stroke-width: 1.5;
+	stroke-dasharray: 4 5;
+}
+
+.reveal .chart .callout {
+	fill: var(--r-heading-color);
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.reveal .chart .series-small,
+.reveal .chart .series-general {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.reveal .chart .series-small {
+	fill: var(--accent);
+}
+
+/* Drawn at half the slide width, so the shared 15–18px chart text would be ~11px on screen. */
+.reveal .chart.schematic text {
+	font-size: 19px;
+}
+
+.reveal .chart.schematic .callout {
+	font-size: 21px;
+}
+
+.reveal .chart.schematic .series-small,
+.reveal .chart.schematic .series-general {
+	font-size: 22px;
+}
+
+.reveal .chart .series-general {
+	fill: var(--accent-2);
+}
+
+.reveal .legend {
+	display: flex;
+	flex-direction: column;
+	gap: 0.7em;
+	font-size: 0.5em;
+	color: var(--muted);
+}
+
+.reveal .legend .swatch {
+	display: inline-block;
+	width: 34px;
+	height: 0;
+	margin-right: 0.6em;
+	vertical-align: middle;
+	border-top: 4px solid var(--accent);
+}
+
+.reveal .legend .swatch.general {
+	border-top: 4px dashed var(--accent-2);
+}
+
+.reveal .legend .swatch.band {
+	height: 14px;
+	border: none;
+	background: var(--muted);
+	opacity: 0.25;
+}
+
+.reveal .formula {
+	margin: 0.5em 0;
+	padding: 0.5em 0.8em;
+	border-radius: var(--radius);
+	background: var(--surface);
+	font-size: 0.85em;
+}
+
+/* Sits between a title and a full-height chart, so the formula has to stay to one compact row. */
+.reveal .definition {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	margin: 0 0 12px;
+}
+
+.reveal .definition .formula {
+	margin: 0;
+	padding: 0.1em 0.6em;
+	font-size: 0.6em;
+}
+
+.reveal .definition p {
+	margin: 0;
+	font-size: 22px;
+	line-height: 1.4;
+}
+
+.reveal .definition .muted {
+	color: var(--muted);
+}
+
+.reveal .formula .label {
+	display: block;
+	margin-bottom: 0.2em;
+	font-size: 0.6em;
+	font-weight: 600;
+	color: var(--muted);
+}
+
+.reveal .slide-number {
+	right: 28px;
+	bottom: 18px;
+	background: transparent;
+	font-family: var(--r-main-font);
+	font-size: 15px;
+	color: var(--muted);
+}
+
+.deck-footer {
+	position: fixed;
+	left: 28px;
+	bottom: 18px;
+	z-index: 20;
+	font-family: var(--r-main-font);
+	font-size: 15px;
+	color: var(--muted);
+	pointer-events: none;
+}
+
+.reveal .progress {
+	height: 4px;
+	color: var(--accent);
+	background: transparent;
+}
+
+.is-title .deck-footer {
+	display: none;
+}
+
+p.reveal code {
+	font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+.reveal .small {
+	font-size: 0.88em;
+}
+
+.reveal .smaller {
+	font-size: 0.7em;
+}
+
+.reveal .caption {
+	margin-top: 0.5em;
+	font-size: 22px;
+	line-height: 1.35;
+	color: var(--muted);
+}
+
+.reveal img.figure {
+	display: block;
+	max-width: 100%;
+	max-height: 480px;
+	margin: 0;
+}
+
+.reveal .card {
+	padding: 26px 30px 18px;
+	border-top: 6px solid var(--accent);
+	border-radius: var(--radius);
+	background: var(--surface);
+}
+
+.reveal .card.general {
+	border-top-color: var(--accent-2);
+}
+
+.reveal .card h3 {
+	margin-bottom: 0.5em;
+	font-size: 0.95em;
+}
+
+.reveal .card ul {
+	margin-left: 0.9em;
+	font-size: 0.88em;
+}
+
+.reveal .card li {
+	margin: 0.45em 0;
+}
+
+.reveal .card.general li::marker {
+	color: var(--accent-2);
+}
+
+.reveal .compact li {
+	margin: 0.32em 0;
+}
+
+.reveal .rq {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 0.3em 0.8em;
+	margin-top: 1.1em;
+	font-size: 0.75em;
+}
+
+.reveal .rq b {
+	color: var(--accent);
+}
+
+.reveal .tiles {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+}
+
+.reveal .tile {
+	padding: 26px 24px;
+	border-radius: var(--radius);
+	background: var(--surface);
+}
+
+.reveal .tile .name {
+	font-size: 1em;
+	font-weight: 800;
+	color: var(--r-heading-color);
+}
+
+.reveal .tile .task {
+	margin-top: 0.35em;
+	font-size: 0.62em;
+	line-height: 1.3;
+	color: var(--muted);
+}
+
+.reveal .tile .classes {
+	float: right;
+	font-size: 0.65em;
+	font-weight: 600;
+	color: var(--accent);
+}
+
+.reveal .group-label {
+	margin: 0.9em 0 0.45em;
+	font-size: 0.42em;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.reveal pre.prompt {
+	width: 100%;
+	margin: 0;
+	border-left: 6px solid var(--accent);
+	background: var(--surface);
+	box-shadow: none;
+	font-size: 0.62em;
+	line-height: 1.55;
+}
+
+.reveal pre.prompt code {
+	max-height: none;
+	padding: 22px 26px;
+	white-space: pre-wrap;
+}
+
+.reveal pre.prompt .slot {
+	color: var(--accent);
+	font-weight: 600;
+}
+
+.reveal .readout-title {
+	margin-bottom: 0.6em;
+	font-size: 0.56em;
+	font-weight: 600;
+	color: var(--r-heading-color);
+}
+
+.reveal .readout table {
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+.reveal .readout th {
+	padding: 0 0 0.4em 0.6em;
+	border-bottom: 2px solid var(--r-heading-color);
+	font-size: 0.48em;
+	font-weight: 600;
+	text-align: right;
+	color: var(--muted);
+}
+
+.reveal .readout th small {
+	display: block;
+	font-size: 0.9em;
+	font-weight: 400;
+}
+
+.reveal .readout td {
+	padding: 0.45em 0;
+	border-bottom: 1px solid var(--rule);
+	font-size: 0.56em;
+	color: var(--r-main-color);
+}
+
+.reveal .readout td + td {
+	padding-left: 0.6em;
+	font-size: 1em;
+	font-weight: 800;
+	text-align: right;
+	color: var(--r-heading-color);
+	font-variant-numeric: tabular-nums;
+}
+
+.reveal .readout .swatch {
+	display: inline-block;
+	width: 24px;
+	height: 4px;
+	margin-right: 0.5em;
+	vertical-align: middle;
+}
+
+/* Colours of the matching lines in the paper's Figure 1, so each row can be found on the plot. */
+.reveal .readout .swatch.prompting {
+	background: #c44e52;
+}
+
+.reveal .readout .swatch.icl {
+	background: #55a868;
+}
+
+.reveal .readout .swatch.instruction {
+	background: #8172b3;
+}
+
+.reveal .key {
+	display: flex;
+	gap: 1.6em;
+	margin-top: 0.4em;
+	font-size: 0.52em;
+	color: var(--muted);
+}
+
+.reveal .key .dot,
+.reveal .key .ring {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-right: 0.45em;
+	vertical-align: -1px;
+	border-radius: 50%;
+}
+
+.reveal .key .dot {
+	background: var(--accent);
+}
+
+.reveal .key .ring {
+	box-sizing: border-box;
+	border: 3px solid var(--r-heading-color);
+}
+
+.reveal .key .inf {
+	margin-right: 0.35em;
+	font-weight: 700;
+	color: var(--r-heading-color);
+}
+
+.reveal .chart .group {
+	fill: var(--muted);
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+}
+
+.reveal .chart .dataset {
+	fill: var(--r-heading-color);
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.reveal .chart .dataset .k {
+	fill: var(--muted);
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.reveal .chart .panel-title {
+	fill: var(--r-heading-color);
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.reveal .chart .span {
+	stroke: var(--r-heading-color);
+	stroke-width: 3;
+}
+
+.reveal .chart .span.never {
+	stroke-dasharray: 6 5;
+}
+
+.reveal .chart .first {
+	fill: var(--accent);
+}
+
+.reveal .chart .second {
+	fill: var(--r-background-color);
+	stroke: var(--r-heading-color);
+	stroke-width: 3;
+}
+
+.reveal .chart .never-mark {
+	fill: var(--r-heading-color);
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.reveal .chart .bar.specialised {
+	fill: var(--accent);
+}
+
+.reveal .chart .bar.general {
+	fill: var(--accent-2);
+}
+
+.reveal .chart .bar.quantised {
+	fill: var(--r-background-color);
+	opacity: 0.45;
+}
+
+.reveal .chart .bar-label {
+	fill: var(--r-main-color);
+	font-size: 17px;
+}
+
+.reveal .chart .bar-value {
+	fill: var(--muted);
+	font-size: 16px;
+	font-variant-numeric: tabular-nums;
+}
+
+.reveal .cols.three {
+	grid-template-columns: repeat(3, 1fr);
+	gap: 28px;
+}
+
+
+.reveal .lead {
+	margin: 0 0 0.8em;
+	font-size: 0.72em;
+	line-height: 1.4;
+}
+
+.reveal .card p {
+	margin: 0;
+	font-size: 0.72em;
+	line-height: 1.4;
+	color: var(--r-main-color);
+}
+
+
+
+/* Blue already means ORES on every chart in this deck, so a second, non-ORES card gets the heading colour. */
+.reveal .card.neutral {
+	border-top-color: var(--r-heading-color);
+}
+
+.reveal .card.neutral li::marker {
+	color: var(--r-heading-color);
+}
+
+.reveal .card h3 .who {
+	margin-left: 0.4em;
+	font-size: 0.62em;
+	font-weight: 600;
+	letter-spacing: 0;
+	color: var(--muted);
+}
+
+.reveal .card ul.points {
+	font-size: 0.8em;
+	line-height: 1.38;
+}
+
+
+.reveal .chart .curve-prior {
+	fill: none;
+	stroke: var(--accent);
+	stroke-width: 4;
+	stroke-linejoin: round;
+}
+
+
+
+
+
+.reveal .notes-list {
+	margin: 0.6em 0 0 1em;
+	font-size: 27px;
+	line-height: 1.35;
+}
+
+.reveal .notes-list li {
+	margin: 0.5em 0;
+}
+
+
+
+
+
+.reveal .key .ring.accent {
+	border-color: var(--accent);
+}
+
+.reveal .key .dot.ores {
+	background: var(--accent-2);
+}
+
+.reveal .key.stacked {
+	flex-direction: column;
+	gap: 0.45em;
+	margin: 0 0 0.6em;
+}
+
+/* A halo in the background colour keeps labels legible where a grid or reference line crosses them. */
+.reveal .chart.ranking text,
+.reveal .chart.targets text,
+.reveal .chart.fairness text,
+.reveal .chart.prior text,
+.reveal .chart.langs text,
+.reveal .chart.repro text,
+.reveal .chart.features text {
+	paint-order: stroke;
+	stroke: var(--r-background-color);
+	stroke-width: 5px;
+	stroke-linejoin: round;
+}
+
+.reveal .chart .bar.rule {
+	fill: var(--muted);
+	opacity: 0.45;
+}
+
+.reveal .chart .auc-value {
+	fill: var(--r-heading-color);
+	font-variant-numeric: tabular-nums;
+}
+
+.reveal .chart .col-head {
+	fill: var(--muted);
+	font-weight: 700;
+}
+
+.reveal .chart .auc-value.best,
+.reveal .chart .bar-value.best {
+	fill: var(--r-heading-color);
+	font-weight: 800;
+}
+
+
+.reveal .chart .axis-title {
+	fill: var(--muted);
+	font-size: 16px;
+}
+
+.reveal .chart .ref-line {
+	stroke: var(--r-heading-color);
+	stroke-width: 2;
+	stroke-dasharray: 8 6;
+}
+
+.reveal .chart .ref-label {
+	fill: var(--r-heading-color);
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.reveal .chart .pt {
+	fill: var(--accent);
+	stroke: var(--r-background-color);
+	stroke-width: 2;
+}
+
+
+
+.reveal .chart .pt-label {
+	fill: var(--r-heading-color);
+	font-size: 18px;
+	font-weight: 700;
+}
+
+
+
+
+
+/* Diagrams are drawn at near 1:1 with the slide, so their text sizes are the on-screen sizes. */
+.reveal .chart.diagram .node rect {
+	fill: var(--surface);
+	stroke: var(--rule);
+	stroke-width: 2;
+}
+
+.reveal .chart.diagram .node.model rect {
+	fill: var(--accent-soft);
+	stroke: var(--accent);
+}
+
+.reveal .chart.diagram .node.out rect {
+	fill: var(--r-heading-color);
+	stroke: var(--r-heading-color);
+}
+
+.reveal .chart.diagram .node.dropped rect {
+	fill: var(--r-background-color);
+	stroke: var(--muted);
+	stroke-dasharray: 7 5;
+}
+
+.reveal .chart.diagram .node-title {
+	fill: var(--r-heading-color);
+	font-size: 21px;
+	font-weight: 700;
+}
+
+.reveal .chart.diagram .node-sub {
+	fill: var(--muted);
+	font-size: 18px;
+}
+
+.reveal .chart.diagram .node.out .node-title,
+.reveal .chart.diagram .node.out .node-sub {
+	fill: var(--r-background-color);
+}
+
+.reveal .chart.diagram .node.dropped .node-title {
+	fill: var(--muted);
+}
+
+.reveal .chart.diagram .edge {
+	fill: none;
+	stroke: var(--muted);
+	stroke-width: 2;
+}
+
+.reveal .chart.diagram .edge-head {
+	fill: var(--muted);
+}
+
+.reveal .chart.diagram .revert {
+	fill: none;
+	stroke: var(--accent);
+	stroke-width: 3;
+}
+
+.reveal .chart.diagram .revert-head {
+	fill: var(--accent);
+}
+
+.reveal .chart.diagram .revert-label {
+	fill: var(--accent);
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.reveal .chart.diagram .stage {
+	fill: var(--accent);
+	font-size: 17px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+}
+
+.reveal .chart.diagram .bracket {
+	fill: none;
+	stroke: var(--accent);
+	stroke-width: 2;
+}
+
+.reveal .chart.diagram .verdict {
+	fill: var(--r-heading-color);
+	font-size: 19px;
+	font-weight: 800;
+	letter-spacing: 0.04em;
+}
+
+.reveal .chart.diagram .verdict.reverted {
+	fill: var(--accent);
+}
+
+.reveal .chart.diagram .verdict.dropped {
+	fill: var(--muted);
+}
+
+.reveal .chart.diagram .why {
+	fill: var(--muted);
+	font-size: 18px;
+}
+
+.reveal .chart .pt.lang {
+	fill: var(--muted);
+	opacity: 0.55;
+	stroke-width: 1.5;
+}
+
+.reveal .chart .pt.lang.named {
+	fill: var(--r-heading-color);
+	opacity: 1;
+}
+
+.reveal .chart .bar.kind-who {
+	fill: var(--accent);
+}
+
+.reveal .chart .bar.kind-text {
+	fill: var(--r-heading-color);
+}
+
+.reveal .chart .bar.kind-meta {
+	fill: var(--muted);
+	opacity: 0.45;
+}
+
+.reveal .chart .key-label {
+	fill: var(--r-main-color);
+	font-size: 16px;
+}
+
+.reveal .key .arrow {
+	margin-right: 0.35em;
+	font-weight: 700;
+	color: var(--accent);
+}
+
+/* Chart text is sized in viewBox units and each chart renders at 0.8–1.0 of its viewBox, so these sizes land at
+   roughly 18–22 px on the slide: readable from the back of a room, which the shared 15 px default is not. */
+.reveal .chart.ranking text { font-size: 20px; }
+.reveal .chart.ranking text.axis-title { font-size: 21px; }
+.reveal .chart.ranking text.col-label { font-size: 20px; }
+.reveal .chart.ranking text.bar-value,
+.reveal .chart.ranking text.panel-title { font-size: 24px; }
+
+.reveal .chart.fairness text { font-size: 19px; }
+.reveal .chart.fairness text.panel-title,
+.reveal .chart.fairness text.bar-label,
+.reveal .chart.fairness text.bar-value,
+.reveal .chart.fairness text.auc-value,
+.reveal .chart.fairness text.col-head { font-size: 22px; }
+.reveal .chart.fairness text.group { font-size: 18px; }
+.reveal .chart.fairness text.ref-label { font-size: 20px; }
+
+.reveal .chart.targets text { font-size: 20px; }
+.reveal .chart.targets text.ref-label { font-size: 22px; }
+.reveal .chart.targets text.pt-label { font-size: 24px; }
+
+.reveal .chart.langs text,
+.reveal .chart.prior text { font-size: 18px; }
+.reveal .chart.features text { font-size: 20px; }
+.reveal .chart.prior text.axis-title,
+.reveal .chart.prior text.ref-label,
+.reveal .chart.langs text.axis-title,
+.reveal .chart.features text.axis-title { font-size: 21px; }
+.reveal .chart.langs text.pt-label { font-size: 21px; }
+.reveal .chart.prior text.callout,
+.reveal .chart.prior text.series-small { font-size: 20px; }
+.reveal .chart.features text.bar-label,
+.reveal .chart.features text.key-label { font-size: 23px; }
+
+.reveal .chart .pt.general {
+	fill: var(--accent-2);
+}
+
+.reveal .chart.repro text { font-size: 17px; }
+.reveal .chart.repro text.panel-title { font-size: 20px; }
+.reveal .chart.repro text.axis-title { font-size: 18px; }
+
+.reveal .chart .col-label {
+	fill: var(--r-main-color);
+}
+
+.reveal .chart .no-model {
+	fill: var(--muted);
+	font-style: italic;
+}
+
+
+
+
+
+
+@media print {
+	.deck-footer {
+		display: none;
+	}
+}
